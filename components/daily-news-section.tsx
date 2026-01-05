@@ -263,7 +263,7 @@ export function DailyNewsSection() {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <Badge className="mb-4 border-0 bg-primary/15 px-4 py-1.5 text-sm text-primary">每天更新</Badge>
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">AI新鲜事</h2>
+          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">AI新鲜事（内容过多，请查看飞书链接）</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">每天带你看AI，掌握最新的人工智能行业动态</p>
         </div>
 

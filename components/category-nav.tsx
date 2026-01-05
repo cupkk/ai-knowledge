@@ -3,7 +3,7 @@
 import { Newspaper, Code, Cpu, Brain, Video, Rocket } from "lucide-react"
 
 const categories = [
-  { id: "news", label: "AI新鲜事（内容过多，请查看飞书链接）", icon: Newspaper, description: "每天更新", color: "text-primary" },
+  { id: "news", label: "AI新鲜事", icon: Newspaper, description: "每天更新", color: "text-primary" },
   { id: "developer", label: "独立开发者", icon: Code, description: "学习资源", color: "text-accent" },
   { id: "hardware", label: "AI+硬件", icon: Cpu, description: "嵌入式开发", color: "text-chart-4" },
   { id: "llm", label: "大模型实战", icon: Brain, description: "Dify/RAG", color: "text-chart-3" },
