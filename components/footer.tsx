@@ -16,7 +16,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2.5">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-              <img src="/avatar.png" alt="头像" className="h-full w-full rounded-xl object-cover" />
+              <img src="avatar.png" alt="头像" className="h-full w-full rounded-xl object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-foreground">AI知识分享</span>

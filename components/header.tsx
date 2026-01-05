@@ -20,7 +20,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-            <img src="/avatar.png" alt="头像" className="h-full w-full rounded-lg object-cover" />
+            <img src="avatar.png" alt="头像" className="h-full w-full rounded-lg object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-foreground">AI知识分享</span>
