@@ -1,62 +1,78 @@
-import { Zap, BookOpen, Users, ArrowDown } from "lucide-react"
+import { ArrowDown, ChevronRight, Search, Sparkles } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+
+const highlights = [
+  { title: "行业资讯", desc: "会议与榜单资料", href: "#industry" },
+  { title: "独立开发者学习", desc: "资料与工具合集", href: "#developer" },
+  { title: "大模型实战", desc: "Dify / RAG", href: "#llm" },
+  { title: "AI 应用展示", desc: "产品上新精选", href: "#applications" },
+]
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b border-border/50 py-24 md:py-32">
-      {/* 背景装饰 */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,200,255,0.15),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(120,255,180,0.08),transparent)]" />
+    <section className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/75 px-6 py-10 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.6)] md:px-10">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(47,107,255,0.18),transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(49,198,184,0.16),transparent_45%)]" />
 
-      {/* 网格背景 */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
+      <div className="relative z-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <div className="space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-1.5 text-xs font-medium text-primary shadow-sm">
+            <Sparkles className="h-3.5 w-3.5" />
+            持续更新 · AI 资料与应用
+          </div>
 
-      <div className="container relative mx-auto px-4 text-center">
-        {/* 标签 */}
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
-          <Zap className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-primary">每日更新 AI 资讯与资源</span>
+          <h1 className="text-balance text-3xl font-semibold text-foreground md:text-4xl lg:text-5xl">
+            AI 知识库与高质量资源
+          </h1>
+
+          <p className="max-w-2xl text-pretty text-sm text-muted-foreground md:text-base">
+            汇总行业资讯、实战教程、论文与产品案例，形成可检索、可收藏的知识空间。
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                placeholder="搜索资讯、教程、论文或产品"
+                className="h-12 rounded-2xl border-white/70 bg-white/85 pl-9 text-sm shadow-sm backdrop-blur-xl focus-visible:ring-primary/30"
+              />
+            </div>
+            <Button className="h-12 rounded-2xl px-6 text-sm font-semibold shadow-sm">开始探索</Button>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="ios-pill">行业资讯</span>
+            <span className="ios-pill">独立开发者</span>
+            <span className="ios-pill">大模型实战</span>
+            <span className="ios-pill">AI 应用展示</span>
+            <span className="ios-pill">讲座直播</span>
+          </div>
+
+          <a
+            href="#industry"
+            className="inline-flex items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <ArrowDown className="h-4 w-4 animate-bounce" />
+            向下查看行业资料
+          </a>
         </div>
 
-        <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          发现 <span className="text-primary">AI</span> 的无限可能
-        </h1>
-
-        <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
-          精选付费课程资源，免费分享给热爱学习的你。
-          <br className="hidden md:block" />
-          从入门到精通，开启你的 AI 学习之旅。
-        </p>
-
-        {/* 特性标签 */}
-        <div className="mb-12 flex flex-wrap items-center justify-center gap-4">
-          <div className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-5 py-2.5 backdrop-blur-sm">
-            <Zap className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">每日更新</span>
-          </div>
-          <div className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-5 py-2.5 backdrop-blur-sm">
-            <BookOpen className="h-4 w-4 text-accent" />
-            <span className="text-sm font-medium text-foreground">优质资源</span>
-          </div>
-          <div className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-5 py-2.5 backdrop-blur-sm">
-            <Users className="h-4 w-4 text-chart-4" />
-            <span className="text-sm font-medium text-foreground">完全免费</span>
-          </div>
+        <div className="space-y-3">
+          {highlights.map((item) => (
+            <a
+              key={item.title}
+              href={item.href}
+              className="group flex items-center justify-between rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-sm shadow-sm transition-all hover:border-primary/20 hover:bg-white"
+            >
+              <div>
+                <div className="font-medium text-foreground">{item.title}</div>
+                <div className="text-xs text-muted-foreground">{item.desc}</div>
+              </div>
+              <ChevronRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
+            </a>
+          ))}
         </div>
-
-        {/* 滚动提示 */}
-        <a
-          href="#news"
-          className="inline-flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-        >
-          <span className="text-xs">开始探索</span>
-          <ArrowDown className="h-4 w-4 animate-bounce" />
-        </a>
       </div>
     </section>
   )

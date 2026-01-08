@@ -1,0 +1,68 @@
+import { BookOpen, Brain, Code, Cpu, Newspaper, Rocket, Video } from "lucide-react"
+
+export const categories = [
+  {
+    id: "industry",
+    label: "行业资讯",
+    icon: Newspaper,
+    description: "资料精选",
+    color: "text-primary",
+    bg: "bg-primary/10",
+  },
+  {
+    id: "developer",
+    label: "独立开发者学习",
+    icon: Code,
+    description: "资料合集",
+    color: "text-accent",
+    bg: "bg-accent/10",
+  },
+  {
+    id: "hardware",
+    label: "具身智能/硬件",
+    icon: Cpu,
+    description: "嵌入式",
+    color: "text-chart-4",
+    bg: "bg-chart-4/10",
+  },
+  {
+    id: "llm",
+    label: "大模型实战",
+    icon: Brain,
+    description: "Dify/RAG",
+    color: "text-chart-3",
+    bg: "bg-chart-3/10",
+  },
+  {
+    id: "talks",
+    label: "讲座与直播",
+    icon: Video,
+    description: "干货分享",
+    color: "text-chart-5",
+    bg: "bg-chart-5/10",
+  },
+  {
+    id: "applications",
+    label: "AI 应用展示",
+    icon: Rocket,
+    description: "产品上新",
+    color: "text-primary",
+    bg: "bg-primary/10",
+  },
+  {
+    id: "papers",
+    label: "论文速览",
+    icon: BookOpen,
+    description: "精选阅读",
+    color: "text-chart-2",
+    bg: "bg-chart-2/10",
+  },
+  {
+    id: "showcase",
+    label: "产品展示",
+    icon: Rocket,
+    description: "案例作品",
+    color: "text-primary",
+    bg: "bg-primary/10",
+  },
+]
